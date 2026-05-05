@@ -1,0 +1,95 @@
+
+
+Q1. What is the time complexity of accessing the 5th element of a Python list?
+Answer:
+O(1) – Constant time
+Explanation: Array indexing directly accesses memory location, so time does not depend on size of list.
+
+
+
+Q2. Analyze this code and state its Big O:
+
+def mystery(n):
+    for i in range(n):
+        for j in range(n):
+            print(i + j)
+
+Answer:
+O(n^2)
+Explanation: Two nested loops, each runs n times → n * n = n²
+
+
+
+Q3. Binary search steps for 1 million elements:
+Answer:
+Maximum steps = log2(1,000,000) ≈ 20
+Explanation: Binary search halves the search space each step.
+
+
+
+Q4. Palindrome function:
+
+def is_palindrome(s):
+    return s == s[::-1]
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+Optimized version:
+
+def is_palindrome(s):
+    left, right = 0, len(s)-1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+
+		
+Q5. Fastest to Slowest:
+
+O(1) < O(log n) < O(n) < O(n log n) < O(n^2) < O(2^n) < O(n!)
+
+
+
+Q6. Optimized duplicate check:
+
+def has_dup(arr):
+    seen = set()
+    for num in arr:
+        if num in seen:
+            return True
+        seen.add(num)
+    return False
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+
+
+Q7. Space complexity of merge sort:
+Answer:
+O(n)
+Explanation: Requires extra space for merging arrays.
+
+Quick sort:
+Space Complexity: O(log n)
+Explanation: Uses recursion stack but sorts in-place.
+
+
+
+Q8. Time estimation:
+
+O(n) → 5 ms for n = 1000
+
+O(n^2):
+Operations increase from 1000 to 1,000,000 (1000x)
+
+Estimated time:
+5 ms * 1000 = 5000 ms = 5 seconds
+
